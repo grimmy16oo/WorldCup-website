@@ -74,7 +74,7 @@
     padding: 16px 25px;
     border-radius: 10px;
     font-weight: 600;
-    border: none;
+    border: 0.1px solid gray;
 }
 .match-left button{
     background-color: red;
@@ -123,6 +123,9 @@
     .layout{
         margin: 20px;
     }
+     .banner-container{
+        padding: 20px;
+     }
     .banner-left{
         padding: 10px;
     }
@@ -138,16 +141,48 @@
     background-color: transparent;
     width: 100%;
     padding: 0;
-    /* padding: 10px auto; */
   }
-  /* matches-left > * {
-    flex: 1;
-  } */
   .match-right{
     grid-template-columns: repeat(2,1fr);
   }
   .match-left button{
     flex: 1;
   } 
+}
+
+/* mobile responsive */
+@media screen and (max-width:576px) {
+    .banner-container{
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+        padding-top: 20px;
+    }
+    .banner-left p{
+        max-width: 100%;
+    }
+    .match-left{
+        flex-direction: column;
+
+    }
+    .match-right{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .match-left{
+        align-items: center;
+    }
+    .match-left button:nth-child(1){
+        width: 100%;
+    }
+    .match-left button:nth-child(2)
+    {
+        width: 80%;
+    }
+    .match-left button
+    {
+        font-size: 1rem;
+        width: 70%;
+    }
+    
     
 }
