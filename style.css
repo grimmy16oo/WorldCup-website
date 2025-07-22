@@ -13,6 +13,37 @@
 .img{
     max-width: 100%;
 }
+
+@keyframes banner-animation{
+    0%{
+        opacity: 0;
+        transform: translatex(-20px);
+    }
+    50%{
+        opacity: 0.5;
+        transform: tranatex(-10px);
+    }
+    100%{
+        opacity: 1;
+        transform: translatex(0px);
+    }
+}
+@keyframes banner-player{
+        0%{
+        opacity: 0.5;
+        transform: translatex(-20px);
+    }
+    50%{
+        opacity: 0.7;
+        transform: tranatex(-10px);
+    }
+    100%{
+        opacity: 1;
+        transform: translatex(0px);
+    }
+}
+
+
 .banner-container{
     background-color: black;
     border-radius: 30px;
@@ -20,6 +51,7 @@
     justify-content: center;
     align-items: center;
     margin: 50px auto;
+    animation: banner-animation 1s forwards 0s ease-in;
 }
 .banner-left{
     color: white;
@@ -51,6 +83,7 @@
 .banner-right img{
     width: 100%;
     display: block;
+    animation: banner-player 1s forward 0 ease-in;
 }
 
 .match-container{
